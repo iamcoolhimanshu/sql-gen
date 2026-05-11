@@ -1,0 +1,168 @@
+.workspace {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  animation: fadeIn 0.3s ease;
+}
+
+.workspace-section {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 18px;
+}
+
+/* NL Section */
+.nl-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+.nl-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+.nl-badge {
+  background: var(--accent-dim);
+  color: var(--accent);
+  font-size: 10px;
+  font-weight: 800;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: var(--font-code);
+  letter-spacing: 0.1em;
+}
+
+.active-conn-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--green);
+  font-weight: 600;
+}
+.conn-dot-sm {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--green);
+  box-shadow: 0 0 6px var(--green);
+  animation: pulse 2s infinite;
+}
+.no-conn-badge {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.nl-input-wrap { position: relative; }
+.nl-textarea {
+  width: 100%;
+  background: var(--bg-overlay);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  font-family: var(--font-ui);
+  font-size: 15px;
+  padding: 14px;
+  resize: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  line-height: 1.6;
+}
+.nl-textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-glow);
+  outline: none;
+}
+.nl-textarea::placeholder { color: var(--text-muted); }
+
+.nl-hint {
+  position: absolute;
+  bottom: 10px;
+  right: 12px;
+  font-size: 10px;
+  color: var(--text-muted);
+  font-family: var(--font-code);
+  pointer-events: none;
+}
+
+.nl-examples {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 10px 0;
+}
+.example-chip {
+  padding: 4px 10px;
+  background: var(--bg-overlay);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  font-size: 12px;
+  color: var(--text-secondary);
+  cursor: pointer;
+  font-family: var(--font-ui);
+  transition: all 0.15s;
+}
+.example-chip:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-glow); }
+
+.nl-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+}
+
+/* SQL Section */
+.sql-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+.sql-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 700;
+}
+.sql-actions { display: flex; gap: 8px; align-items: center; }
+
+.sql-editor {
+  width: 100%;
+  min-height: 140px;
+  background: var(--bg-base);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--accent);
+  font-family: var(--font-code);
+  font-size: 13px;
+  line-height: 1.7;
+  padding: 14px;
+  resize: vertical;
+  transition: border-color 0.18s;
+}
+.sql-editor:focus {
+  border-color: var(--accent);
+  outline: none;
+}
+.sql-editor::placeholder { color: var(--text-muted); font-family: var(--font-code); }
+
+/* Error */
+.query-error {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px;
+  background: var(--red-dim);
+  border: 1px solid rgba(242, 90, 90, 0.2);
+  border-radius: var(--radius-sm);
+}
+.query-error-icon { font-size: 18px; flex-shrink: 0; color: var(--red); }
+.query-error strong { display: block; color: var(--red); font-size: 13px; font-weight: 700; margin-bottom: 4px; }
+.query-error p { color: var(--text-secondary); font-size: 12px; font-family: var(--font-code); }

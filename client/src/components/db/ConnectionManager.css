@@ -1,0 +1,96 @@
+.conn-manager {
+  padding: 28px;
+  max-width: 900px;
+  animation: fadeIn 0.3s ease;
+}
+
+.conn-manager-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+.conn-manager-header h2 {
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 4px;
+}
+.conn-manager-header p { color: var(--text-secondary); font-size: 14px; }
+
+.conn-form { margin-bottom: 24px; }
+.conn-form-title { font-size: 16px; font-weight: 700; margin-bottom: 16px; }
+.conn-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.ssl-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  user-select: none;
+}
+.ssl-toggle input { accent-color: var(--accent); width: 14px; height: 14px; }
+
+.test-result {
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  font-family: var(--font-code);
+  margin-bottom: 14px;
+}
+.test-result.success { background: var(--green-dim); color: var(--green); }
+.test-result.error { background: var(--red-dim); color: var(--red); }
+
+.conn-form-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.conn-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.conn-empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.conn-empty-icon { font-size: 40px; }
+.conn-empty h3 { font-size: 18px; font-weight: 700; }
+.conn-empty p { color: var(--text-secondary); font-size: 14px; }
+
+.conn-card {
+  cursor: pointer;
+  transition: border-color 0.18s, box-shadow 0.18s, transform 0.18s;
+}
+.conn-card:hover {
+  border-color: var(--accent);
+  box-shadow: var(--shadow-accent);
+  transform: translateY(-2px);
+}
+
+.conn-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+.conn-card-icon { font-size: 24px; }
+.conn-card-name { font-size: 16px; font-weight: 700; margin-bottom: 8px; }
+.conn-card-details { display: flex; flex-direction: column; gap: 6px; }
+.conn-card-details code { font-size: 11px; color: var(--text-muted); word-break: break-all; }
